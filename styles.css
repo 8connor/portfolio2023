@@ -1,0 +1,67 @@
+/* call to action #CC8434 */
+/* 131313-2e2e2f-313e8c-6a6a6d-b5b3b3 */
+
+/* style reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: #131313;
+    font-family: sans-serif;
+    color: #b5b3b3;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation */
+.nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    width: 100%;
+}
+
+.nav-bar a {
+    color: #b5b3b3;
+    font-size: large;
+    margin: 0 5px 0 5px;
+}
+
+.nav-bar > .nav-bar__links{
+    margin: auto
+}
+
+.nav-bar>.nav-bar__icons {
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.nav-bar>.nav-bar__icons>a {
+    fill: #b5b3b3;
+}
+
+/* Hero */
+header {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    justify-content: center;
+    align-content: center;
+    min-height: 500px;
+}
+
+.hero__intro{
+
+}
+
+.hero__intro>h1 {
+    font-size: 50px;
+    color: #313e8c;
+}
