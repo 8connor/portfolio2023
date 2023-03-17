@@ -46,6 +46,10 @@ a {
     margin: auto
 }
 
+.nav-bar>.nav-bar__links>a:hover {
+    color: #313e8c;
+}
+
 .nav-bar>.nav-bar__icons {
     display: flex;
     align-items: center;
@@ -60,6 +64,9 @@ a {
     align-items: center;
 }
 
+.nav-bar>.nav-bar__icons>a:hover {
+    fill: #313e8c;
+}
 
 /* Hero */
 header {
