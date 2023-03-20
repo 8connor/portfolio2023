@@ -26,6 +26,15 @@ a {
   text-decoration: none;
 }
 
+.line::before {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background: #b5b3b3;
+  position: absolute;
+  top: 0;
+}
+
 /* Navigation */
 .nav-bar {
   display: grid;
@@ -105,14 +114,7 @@ header {
   position: relative;
 }
 
-.about::before {
-  content: "";
-  width: 50%;
-  height: 2px;
-  background: #b5b3b3;
-  position: absolute;
-  top: 0;
-}
+
 
 .about > p {
   width: 50%;
@@ -166,28 +168,73 @@ ul > li {
   padding-top: 50px;
 }
 
-.projects::before {
-  content: "";
-  width: 50%;
-  height: 2px;
-  background: #b5b3b3;
-  position: absolute;
-  top: 0;
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
-.project{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 20px;
+/* Contact */
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  position: relative;
+}
+
+.contact>.inputs{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.contact>.inputs>input{
+  width: 100%;
+  padding: 10px 150px 10px 2px;
+  background: none;
+  border: none;
+  border-bottom: #313e8c 2px solid;
+  color: #b5b3b3;
+}
+
+#name{
+  margin-top: 25px;
+}
+
+.contact>.textarea{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact>.inputs>textarea{
+  background: none;
+  border: none;
+  border-bottom: #313e8c 2px solid;
+  color: #b5b3b3;
+  resize: none;
+  margin-top: 30px;
+}
+
+.contact__title{
+  margin-bottom: 50px;
 }
 
 /* misc */
 .card {
+  margin: 20px;
   padding: 20px;
   background-color: #131313;
   border-radius: 5px;
+  position: relative;
+  z-index: 999;
   box-shadow: 10px 5px 40px black;
   display: flex;
   flex-direction: column;

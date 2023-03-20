@@ -62,7 +62,7 @@
         </div>
 
     </header>
-    <section class="about" id="about">
+    <section class="about line" id="about">
         <p>
             Full stack web developer that is focused on making an
             enjoyable user experience on the web. I graduated
@@ -127,7 +127,26 @@
             </div>
         </aside>
     </section>
-    <section class="projects" id="projects">
+    <section class="projects line" id="projects">
+        <div class="project">
+            <div class="card">
+                <h1 class="card-title">
+                    Movie Night
+                </h1>
+                <div class="card-body">
+                    <p>
+                        A React and Django application to help you and your friends search for movies.
+                        <br>
+                        This application features a voting system, rating system, and group creation/management.
+                    </p>
+                    <a href="#" class="card-link">
+                        Repository
+                    </a>
+                </div>
+            </div>
+            <img src="./images/movie_night.png" height="auto" width="50%" />
+
+        </div>
         <div class="project">
             <img src="./images/movie_night.png" height="auto" width="50%" />
             <div class="card">
@@ -146,30 +165,18 @@
                 </div>
             </div>
         </div>
-        <div class="project">
-            <img src="./images/movie_night.png" height="auto" width="50%" />
-            <div class="card">
-                <h1 class="card-title">
-                    Movie Night
-                </h1>
-                <div class="card-body">
-                    <p>
-                        A React and Django application to help you and your friends search for movies.
-                        <br>
-                        This application features a voting system, rating system, and group creation/management.
-                    </p>
-                    <a href="#" class="card-link">
-                        Repository
-                    </a>
-                </div>
-
-
-            </div>
-        </div>
-
     </section>
-    <section class="contact" id="contact">
-
+    <section class="contact line" id="contact">
+        <div class="contact__title">
+            <h1>
+                Contact
+            </h1>
+        </div>
+        <div class="inputs">
+            <input id="email" placeholder="Email" name="email" type="email" />
+            <input id="name" placeholder="Name" name="name" type="text" />            
+            <textarea placeholder="Message" id="content" name="content" rows="7"></textarea>
+        </div>
     </section>
     <section class="Resume" id="resume">
 
@@ -178,5 +185,9 @@
 
     </footer>
 </body>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript" src="./index.js" />
 
 </html>
