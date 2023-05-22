@@ -203,6 +203,10 @@ ul > li {
   color: #b5b3b3;
 }
 
+.contact>.inputs>input:focus{
+  outline: none;
+}
+
 #name{
   margin-top: 25px;
 }
@@ -222,6 +226,10 @@ ul > li {
   resize: none;
   margin-top: 30px;
   font-family: inherit;
+}
+
+.contact>.inputs>textarea:focus{
+  outline: none;
 }
 
 .contact__title{
@@ -275,10 +283,31 @@ ul > li {
 }
 
 .button {
+  cursor: pointer;
   padding: 5px;
   border: #cc8434 solid 2px;
   border-radius: 5px;
   color: #cc8434 !important;
+  user-select: none; 
+}
+
+.blue-btn{
+  color: #313e8c !important;
+  border: #313e8c solid 2px;
+}
+
+.blue-btn:hover {
+  background-color: #313e8c;
+}
+
+.btn-big{
+  padding: 10px 100px
+}
+
+.submit-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
 
 /* Footer */
