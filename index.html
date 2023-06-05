@@ -166,23 +166,27 @@
             </div>
         </div>
     </section>
-    <section class="contact line" id="contact">
-        <div class="contact__title">
-            <h1>
-                Contact
-            </h1>
-        </div>
-        <div class="inputs">
-            <input id="email" placeholder="Email" name="email" type="email" />
-            <input id="name" placeholder="Name" name="name" type="text" />
-            <textarea placeholder="Message" id="content" name="content" rows="7"></textarea>
-            <div class="submit-container">
-                <a class="button btn-big" id="submit">
-                    Submit
-                </a>
+    <form id="contact_form">
+        <section class="contact line" id="contact">
+            <div class="contact__title">
+                <h1>
+                    Contact
+                </h1>
             </div>
-        </div>
-    </section>
+            <div class="inputs">
+                <input type="hidden" name="contactNum" id="contactNum" value="">
+                <input id="email" placeholder="Email" name="email" type="email" required />
+                <input id="name" placeholder="Name" name="name" type="text" required/>
+                <textarea placeholder="Message" id="content" name="content" rows="7" required></textarea>
+                <div class="submit-container">
+                    <button type="submit" class="button btn-big" id="submit">
+                        Submit
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </form>
     <section class="Resume" id="resume">
 
     </section>

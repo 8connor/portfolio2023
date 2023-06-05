@@ -1,6 +1,12 @@
 /* call to action #CC8434 */
 /* 131313-2e2e2f-313e8c-6a6a6d-b5b3b3 */
 
+/* Common breakpoints are 320px — 480px for mobile devices, 
+481px — 768px for iPads & tablets, 769px — 1024px for small screens like laptop,
+ 1025px — 1200px for large screens like Desktops, 
+ and 1201px and above for extra large screens like TV. */
+
+
 /* style reset */
 * {
   margin: 0;
@@ -77,16 +83,27 @@ a {
   fill: #313e8c;
 }
 
+@media only screen and (max-width: 768px) {
+  .nav-bar a {
+    display: none;
+  }
+
+  .nav-bar > .nav-bar__icons > a > svg {
+    height: 40px;
+    width: 40px;
+  }
+}
+
 /* Hero */
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 90vh;
+  animation: fadein 2s;
 }
 
-/* .hero__intro {} */
-
+/* .hero__intro */
 .hero__intro > h3 {
   margin-left: 0;
   color: #6a6a6d;
@@ -104,6 +121,21 @@ header {
   color: #b5b3b3;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+}
+
 /* About */
 .about {
   padding-top: 50px;
@@ -113,8 +145,6 @@ header {
   align-items: center;
   position: relative;
 }
-
-
 
 .about > p {
   width: 50%;
@@ -158,6 +188,23 @@ ul > li {
   margin-right: 5px;
 }
 
+@media only screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about > p {
+    width: 100%;
+    line-height: 1.7rem;
+    text-align: center;
+  }
+
+  .skills {
+    width: 100%;
+    padding-top: 100px;
+  }
+}
+
 /* Projects */
 .projects {
   position: relative;
@@ -176,8 +223,29 @@ ul > li {
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    padding: 50px 0;
+    border-bottom: 1px solid #b5b3b3;
+  }
+
+  .project > .card {
+    width: 100%;
+  }
+
+  .project > img {
+    height: auto;
+    width: 100%;
+  }
+
+  .project:last-child {
+    border-bottom: none;
+  }
+}
+
 /* Contact */
-.contact{
+.contact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,7 +254,7 @@ ul > li {
   position: relative;
 }
 
-.contact>.inputs{
+.contact > .inputs {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -194,7 +262,7 @@ ul > li {
   width: 50%;
 }
 
-.contact>.inputs>input{
+.contact > .inputs > input {
   width: 100%;
   padding: 10px 150px 10px 2px;
   background: none;
@@ -203,22 +271,22 @@ ul > li {
   color: #b5b3b3;
 }
 
-.contact>.inputs>input:focus{
+.contact > .inputs > input:focus {
   outline: none;
 }
 
-#name{
+#name {
   margin-top: 25px;
 }
 
-.contact>.textarea{
+.contact > .textarea {
   width: 50%;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.contact>.inputs>textarea{
+.contact > .inputs > textarea {
   background: none;
   border: none;
   border-bottom: #313e8c 2px solid;
@@ -228,12 +296,18 @@ ul > li {
   font-family: inherit;
 }
 
-.contact>.inputs>textarea:focus{
+.contact > .inputs > textarea:focus {
   outline: none;
 }
 
-.contact__title{
+.contact__title {
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact > .inputs {
+    width: 100%;
+  }
 }
 
 /* misc */
@@ -280,18 +354,20 @@ ul > li {
 .button:hover {
   background-color: #cc8434;
   color: #b5b3b3 !important;
+  transition: all 0.5s;
 }
 
 .button {
+  background: transparent;
   cursor: pointer;
   padding: 5px;
   border: #cc8434 solid 2px;
   border-radius: 5px;
   color: #cc8434 !important;
-  user-select: none; 
+  user-select: none;
 }
 
-.blue-btn{
+.blue-btn {
   color: #313e8c !important;
   border: #313e8c solid 2px;
 }
@@ -300,11 +376,11 @@ ul > li {
   background-color: #313e8c;
 }
 
-.btn-big{
-  padding: 10px 100px
+.btn-big {
+  padding: 10px 100px;
 }
 
-.submit-container{
+.submit-container {
   display: flex;
   justify-content: center;
   padding-top: 20px;

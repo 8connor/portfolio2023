@@ -1,7 +1,31 @@
 (function () {
-    emailjs.init('user_tssWZv8azwNWJGRvDkwsl');
+  emailjs.init("user_tssWZv8azwNWJGRvDkwsl");
 })();
 
-document.getElementById('submit').addEventListener('click', () => {
-    console.log('clicked')
-})
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("contact_form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    this.contactNum.value = (Math.random() * 100000) | 0;
+
+    emailjs
+      .sendForm("service_no22119", "template_fbgakbo", "#contact_form")
+      .then(
+        function (res) {
+          console.log(res.status);
+
+          if (res.status === 200) {
+            console.log("success");
+
+            var frm = document.getElementById("contact_form");
+            frm.reset();
+
+            return false;
+          }
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+  });
+});
