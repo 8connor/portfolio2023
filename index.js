@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             var frm = document.getElementById("contact_form");
             frm.reset();
 
+            document.getElementById('contact-inputs').style.display = 'none';
+            document.getElementById('thank-you').style.display = 'block';
+
             return false;
           }
         },
