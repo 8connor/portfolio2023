@@ -121,14 +121,6 @@ header {
   color: #b5b3b3;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 @media only screen and (max-width: 768px) {
   header {
@@ -220,7 +212,12 @@ ul > li {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 35px;
+}
+
+.project > img {
+  height: auto;
+  width: 50%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -317,12 +314,13 @@ ul > li {
   background-color: #131313;
   border-radius: 5px;
   position: relative;
-  z-index: 999;
+  z-index: 2;
   box-shadow: 10px 5px 40px black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 
 .card-title {
@@ -389,4 +387,13 @@ ul > li {
 /* Footer */
 footer {
   margin-top: 50px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
